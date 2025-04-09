@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Task Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="main-body">
+  <div class="container">
+    <h1>Welcome, {{ session['username'].capitalize() }} 👋</h1>
+    <a href="/logout" class="logout">Logout</a>
+
+    <h2>Add New Task</h2>
+    <form method="POST" action="/add" class="form-box">
+      <input type="text" name="title" placeholder="Task title"><br>
+      <textarea name="description" placeholder="Task description..."></textarea><br>
+      <select name="suggestion">
+        <option disabled selected>-- Pick a suggestion --</option>
+        {% for s in suggestions %}
+          <option value="{{ s }}">{{ s }}</option>
+        {% endfor %}
+      </select><br>
+      <button type="submit" class="btn-add">Add Task</button>
+    </form>
+
+    <h2>Your Tasks</h2>
+    <table class="task-table">
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+      {% for t in tasks %}
+      <tr class="{{ 'done' if t.done else 'pending' }}">
+        <td>{{ t.title }}</td>
+        <td>{{ t.desc }}</td>
+        <td>{{ t.time }}</td>
+        <td>{{ '✅ Complete' if t.done else '⏳ Pending' }}</td>
+        <td>
+          {% if not t.done %}
+            <a href="/complete/{{ loop.index0 }}" class="btn-complete">Mark Done</a>
+          {% endif %}
+          <a href="/delete/{{ loop.index0 }}" class="btn-delete">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</body>
+</html>

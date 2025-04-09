@@ -1,0 +1,110 @@
+body.login-body {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  
+  .login-box input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 90%;
+  }
+  
+  .login-box button {
+    padding: 10px 20px;
+    background: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .error-msg {
+    color: red;
+  }
+  
+  body.main-body {
+    background: #f0f9ff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+  
+  .logout {
+    float: right;
+    text-decoration: none;
+    background: crimson;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  .form-box input, .form-box textarea, .form-box select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .btn-add {
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .task-table th, .task-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .task-table tr.done {
+    background: #d4edda;
+  }
+  
+  .task-table tr.pending {
+    background: #fff3cd;
+  }
+  
+  .btn-complete {
+    background: #28a745;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .btn-delete {
+    background: #dc3545;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
