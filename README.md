@@ -1,8 +1,3 @@
-Here's a clean, well-structured, and beginner-friendly **README.md** for your Daily Task Tracker project — works great if you're pushing to GitHub or showing it off to others. You can copy-paste it into a file named `README.md` in your project folder:
-
----
-
-```markdown
 # 📝 Daily Task Tracker Web App
 
 A simple and beautiful Flask web application to keep track of your daily activities.  
